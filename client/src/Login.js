@@ -36,7 +36,7 @@ const Login = ({ setIsAuthenticated }) => {
                 <div className="login-subtitle">Per accedere al chatbot inserisci la tua chiave di accesso</div>
                 {error && <p style={{ color: "red" }}>{error}</p>}                    
                 <form className="input-box-login" onSubmit={handleLogin}>
-                    <input className='input' type="text" placeholder="La tua chiave" value={accessKey} onChange={(e) => setAccessKey(e.target.value)} required />
+                    <input className='input' type="password" placeholder="La tua chiave" value={accessKey} onChange={(e) => setAccessKey(e.target.value)} required />
                     <button className="submit-login d-title-font" type="submit">Accedi</button>
                 </form>
             </div>
