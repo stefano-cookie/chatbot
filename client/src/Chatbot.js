@@ -34,7 +34,7 @@ function Chat() {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      const response = await fetch("http://127.0.0.1:5001/api/query", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/query`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: currentInput, sessionId }),
